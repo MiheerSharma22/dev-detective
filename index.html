@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Detective</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- top level wrapper -->
+    <div id="wrapper">
+        
+        <!-- container for all the page elements -->
+        <div class="container">
+
+            <!-- container for heading and dark/lightmode -->
+            <div class="header">
+                <p class="page-heading">DevDetective</p>
+
+                <!-- dark/lightmode container -->
+                <div class="dark-light-mode-container">
+                    <!-- image of sun / or moon -->
+                    <img src="./assets/sun-icon.svg" alt="dark mode" class="sun-image" width="25" height="25" loading="la
+                    ">
+                    <img src="./assets/moon-icon.svg" alt="light mode" class="moon-image" width="25" height="25" loading="la
+                    ">
+                </div>
+            </div>
+
+            <!-- container for search field -->
+            <div class="search-field-container">
+                <!-- <i class="fa-light fa-magnifying-glass"></i> -->
+                <input type="search" placeholder="Enter a GitHub username..." class="enter-username">
+                <button type="submit" class="search-btn">Search</button>
+                <span class="no-user-found"></span>
+            </div>
+
+            <!-- main information display container -->
+            <div class="main-info-container">
+                <!-- user image -->
+                <img src="" alt="" class="user-image">
+                <!-- user info container -->
+                <div class="user-info-container">
+
+                    <!-- user name and joining date container -->
+                    <div class="user-name-joining-date-container">
+
+                        <!-- user name and github's username container -->
+                        <div class="user-github-name">
+                            <p class="name"></p>
+                            <a href="" target="_blank"  class="github-name"></a>
+                        </div>
+                        <p class="joining-date"></p>
+                    </div>
+                    
+                    <p class="bio"></p>
+
+                    <!-- user's activity and repo display container -->
+                    <div class="user-github-activity-display-container">
+                        <!-- repo container -->
+                        <div class="repo-container equal-width">
+                            <p class="repos-heading">Repos</p>
+                            <p class="repo-number"></p>
+                        </div>
+
+                        <!-- followers container -->
+                        <div class="followers-container equal-width">
+                            <p class="followers-heading">Followers</p>
+                            <p class="followers-number"></p>
+                        </div>
+
+                        <!-- following container -->
+                        <div class="following-container equal-width">
+                            <p class="following-heading">Following</p>
+                            <p class="following-number"></p>
+                        </div>
+                    </div>
+
+                    <!-- user's location and social;s container-->
+                    <div class="location-and-socials-container">
+                        <div class="location-container common-container">
+                            <!-- location container -->
+                            <img src="./assets/location.svg" alt="" width="14" height="20" class="adjust-brightness">
+                            <p class="location"></p>
+                        </div>
+                        
+                        <!-- github link container -->
+                        <div class="github-link-container common-container">
+                            <img src="assets/chain-icon.svg" alt="" width="20" height="20" class="adjust-brightness">
+                            <p ><a href="#" target="_blank" class="github-link"></a></p>
+                        </div>
+                        
+                        <!-- twitter link container -->
+                        <div class="twitter-link-container common-container">
+                            <img src="./assets/twitter-icon.svg" alt="" width="20" height="20" class="adjust-brightness">
+                            <a href="#" target="_blank" class="twitter-link"></a>
+                        </div>
+
+                        <!-- company container -->
+                        <div class="company-container common-container">
+                            <img src="./assets/company-icon.svg" alt="" width="20" height="20" class="adjust-brightness">
+                            <p class="company"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/df4ed2d41c.js" crossorigin="anonymous"></script>
+</body>
+</html>

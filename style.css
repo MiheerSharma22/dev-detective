@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-bg : #141d2f;
+    --main-text: #ffffff;
+    --btn-text : #ffffff;
+    --second-text : #ffffff;
+    --container-color : #1e2a47;
+    --btn-bg : #0079ff;
+    --btn-hover-bg : #60abff;
+    --user-activity-bg: #141d2f;
+    --span-bg: rgba(255, 0, 0, 0.491); 
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+}
+
+#wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--dark-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 730px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--main-text);
+    margin-bottom: 2.5rem;
+}
+
+.page-heading {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.dark-light-mode-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.search-field-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding : 0.7rem 0.9rem;
+    padding-left: 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--container-color);
+    margin-bottom: 1.5rem;
+}
+
+.search-field-container .enter-username {
+    width: 80%;
+    font-size: 1.2rem;
+    background-color: transparent;
+    color: var(--main-text);
+    border: none;
+    font-family: 'Space Mono', monospace;
+}
+.enter-username::placeholder {
+    color: var(--main-text);
+    opacity: 0.75;
+}
+.enter-username:focus {
+    outline: none;
+}
+
+.search-field-container .search-btn {
+    all: unset;
+    background-color: var(--btn-bg);
+    padding: 1rem 1.7rem;
+    color: var(--btn-text);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.search-btn:hover {
+    background-color: var(--btn-hover-bg);
+}
+
+.main-info-container {
+    width: 100%;
+    background-color: var(--container-color);
+    border-radius: 1rem;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-image {
+    width: 117px;
+    height: 117px;
+    border-radius: 50%;
+}
+
+.user-info-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name-joining-date-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.user-name-joining-date-container a {
+    color: var(--btn-bg);
+}
+
+.user-github-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 1.5rem;
+    color: var(--second-text);
+    font-weight: 700;
+}
+
+.github-name {
+    color: var(--btn-bg);
+}
+
+.joining-date {
+    padding-top: 8px;
+    color: var(--main-text);
+    font-size: 15px;
+}
+
+.bio {
+    width: 60%;
+    color: var(--main-text);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    opacity: 0.75;
+    line-height: 25px;
+    font-size: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.user-github-activity-display-container {
+    background-color: var(--user-activity-bg);
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    color: var(--main-text);
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2.5rem;
+}
+
+.equal-width {
+    width: 33%;
+}
+
+.repos-heading {
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 0.3rem;
+}
+.repo-number {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--second-text);
+}
+
+.followers-heading {
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 0.3rem;
+}
+.followers-number {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--second-text);
+}
+
+.following-heading {
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 0.3rem;
+}
+.following-number {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--second-text);
+}
+
+.location-and-socials-container {
+    word-break: break-all;
+    width: 100%;
+    display: grid;
+    /* flex-wrap: wrap; */
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.common-container {
+    gap: 10px;
+    color: var(--main-text);
+    font-weight: 500;
+    font-size: 15px;
+}
+.common-container a {
+    color: var(--main-text);
+}
+.common-container img {
+    filter: brightness(1000%);
+}
+
+.location-container , .twitter-link-container , .company-container{
+    display: flex;
+    align-items: center;
+}
+
+.github-link-container {
+    display: flex;
+    align-items: center;
+}
+
+
+.no-user-found {
+    position: absolute;
+    left: 10px;
+    bottom: 15px;
+    padding: 0.7rem 1.5rem;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--span-bg);
+    color: #ffffff;
+    transition: all 200ms ease;
+    z-index: 1;
+}
+.active {
+    opacity:1;
+    transform: scale(1);
+    transform-origin: bottom;
+}

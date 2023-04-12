@@ -1,5 +1,5 @@
 # Overview
-This is another JS project to practice and strenghten the understanding of working with APIs.
+This is another JS project to practice and strengthen the understanding of working with APIs.
 
 # Technologies Used
 <ul>
@@ -15,7 +15,7 @@ For live demo of the project, click <a href="https://dev-detective-app.netlify.a
 <ul>
 <li>I learned how to set an eventlistener to check if a specific key is pressed on the keyboard, 'enter' key here to search for the user entered github username.</li>
 <li> My new learning in this project is <b><i>implementation of the dark mode</b></i>, by changing the values of the root element thorugh JavaScript event listeners.
-<li>Strenghtened my understanding of working with APIs.</li>
+<li>Strengthened my understanding of working with APIs.</li>
 </ul>
 
 # Screenshots

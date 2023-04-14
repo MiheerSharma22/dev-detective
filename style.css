@@ -24,18 +24,31 @@ body {
 
 #wrapper {
     position: relative;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 2.5rem 0;
     background-color: var(--dark-bg);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+@media(max-width:860px) {
+    #wrapper {
+        padding: 2.5rem 2rem;
+    }
+}
+
 .container {
-    width: 730px;
+    max-width: 730px;
     display: flex;
     flex-direction: column;
+}
+
+@media(max-width: 700px) {
+    .container {
+        min-width: 80%;
+    }
 }
 
 .header {
@@ -71,6 +84,13 @@ body {
     background-color: var(--container-color);
     margin-bottom: 1.5rem;
 }
+@media (max-width: 460px){
+    .search-field-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding:1rem;
+    }
+}
 
 .search-field-container .enter-username {
     width: 80%;
@@ -86,6 +106,17 @@ body {
 }
 .enter-username:focus {
     outline: none;
+}
+
+@media(max-width:700px) {
+    .search-field-container .enter-username {
+        font-size: 1rem;
+    }
+}
+@media(max-width:460px) {
+    .search-field-container .enter-username {
+        width: 100%;
+    }
 }
 
 .search-field-container .search-btn {
@@ -104,6 +135,22 @@ body {
     background-color: var(--btn-hover-bg);
 }
 
+@media(max-width:700px) {
+    .search-field-container .search-btn {
+        padding: 1rem;
+        font-size: 13px;
+    }
+}
+@media(max-width:460px) {
+    .search-field-container .search-btn {
+        padding: 0.5rem;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 .main-info-container {
     width: 100%;
     background-color: var(--container-color);
@@ -112,17 +159,45 @@ body {
     display: flex;
     justify-content: space-between;
 }
+@media (max-width: 700px){
+    .main-info-container {
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+}
 
 .user-image {
     width: 117px;
     height: 117px;
     border-radius: 50%;
+    margin-bottom: 2rem;
+}
+@media (max-width: 700px){
+   .user-image{
+    width: 150px;
+    height: 150px;
+   }
 }
 
 .user-info-container {
     width: 70%;
     display: flex;
     flex-direction: column;
+}
+@media (max-width: 700px){
+    .user-info-container {
+       width: 100%;
+    }
+
+}
+
+@media (max-width:460px){
+    .main-info-container{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
 }
 
 .user-name-joining-date-container {
@@ -166,6 +241,40 @@ body {
     font-size: 15px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+@media (max-width: 700px){
+    .bio {
+        width: 70%;
+        margin: 1.5rem auto;
+    }
+
+}
+
+@media(max-width:500px){
+    .name , 
+    .github-name {
+        font-size: 1.2rem;
+    }
+
+    .name{
+        margin: auto;
+    }
+
+    .joining-date{
+        font-size: 13px;
+    }
+
+    .user-name-joining-date-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bio {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
 
 .user-github-activity-display-container {
     background-color: var(--user-activity-bg);
@@ -175,6 +284,14 @@ body {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 2.5rem;
+}
+@media(max-width:400px) {
+    .user-github-activity-display-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
 }
 
 .equal-width {
@@ -221,11 +338,17 @@ body {
     word-break: break-all;
     width: 100%;
     display: grid;
-    /* flex-wrap: wrap; */
     grid-template-columns: repeat(2,1fr);
     column-gap: 1.5rem;
     row-gap: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media(max-width: 450px) {
+    .location-and-socials-container {
+        grid-template-columns: repeat(1,1fr);
+        place-items: center;
+    }
 }
 
 .common-container {

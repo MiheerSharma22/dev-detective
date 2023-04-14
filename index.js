@@ -7,6 +7,8 @@ const searchButton = document.querySelector('.search-btn');
 const mainInfoContainer = document.querySelector('.main-info-container');
 const root = document.querySelector(':root');
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const spinner = document.querySelector('.spinner');
+const container = document.querySelector('container');
 
 let currMode = darkMode;
 
@@ -148,9 +150,18 @@ function renderOnWebPage(data) {
 // function to get the github profile using API of entered user
 async function getUserProfile(userName) {
     try {
+
+        // displaying the loader
+        spinner.classList.add('active');
+        mainInfoContainer.classList.remove('active');
+
         let response = await fetch(`https://api.github.com/users/${userName}`);
 
         const data = await response.json();
+
+        // hiding the loader and showing info
+        spinner.classList.remove('active');
+        mainInfoContainer.classList.add('active');
 
         renderOnWebPage(data);
     }
